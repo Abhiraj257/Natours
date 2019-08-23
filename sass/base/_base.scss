@@ -1,0 +1,54 @@
+@import "../abstracts/variables";
+
+/*--------------- RESET -------------*/
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+::selection {
+	background-color: $color-primary;
+	color: $color-white;
+}
+
+::-moz-selection {
+	background-color: $color-primary;
+	color: $color-white;
+}
+
+
+::-webkit-scrollbar{
+	width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+	background-color: $color-grey-light-1;
+}
+
+::-webkit-scrollbar-thumb {
+	background-image: linear-gradient($color-primary-light, $color-primary-dark);
+	border-radius: .6rem;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Lato', san-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	color: #777;
+	padding: 3rem;
+	box-sizing: border-box;
+}
+.row {
+	max-width: 114rem;
+	margin: 0 auto;
+	@include clearfix;
+}
+

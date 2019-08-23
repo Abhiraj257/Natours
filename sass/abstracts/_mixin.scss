@@ -1,0 +1,19 @@
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin marginBottom($bottom) {
+	
+	margin-bottom: $bottom * 1rem;
+	
+}
+
+@mixin marginTop($top) {
+	
+	margin-top: $top * 1rem;
+	
+}
