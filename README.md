@@ -1,2 +1,0 @@
-# Natours
-template
