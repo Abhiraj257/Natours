@@ -1,4 +1,5 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixin";
 
 /*--------------- RESET -------------*/
 
@@ -9,6 +10,9 @@
 	padding: 0;
 	box-sizing: inherit;
 }
+
+/* -------------- BASIC SETUP ----------*/
+
 ::selection {
 	background-color: $color-primary;
 	color: $color-white;
@@ -34,8 +38,19 @@
 }
 
 html {
-	font-size: 62.5%;
+	font-size: 62.5%; //1rem = 10px, 10/16 = .625
 	scroll-behavior: smooth;
+
+	@include respond (tab-land) {
+		font-size: 56.25%; //1rem = 9px, 9/16 = .5625
+	}
+	@include respond (tab-port) {
+		font-size: 50%; //1rem = 8rem, 8/16 = .5
+	}
+	@include respond (big-desktop) {
+		font-size: 75%; //1rem = 12rem, 12/16 = .75
+	}
+
 }
 
 body {
@@ -44,11 +59,17 @@ body {
 	line-height: 1.7;
 	color: #777;
 	padding: 3rem;
+	@include respond (tab-port) {
+		padding: 0;
+	}
 	box-sizing: border-box;
 }
 .row {
 	max-width: 114rem;
 	margin: 0 auto;
 	@include clearfix;
+	@include respond(tab-port) {
+		max-width: 50%;
+	}
 }
 

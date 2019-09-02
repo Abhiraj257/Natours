@@ -64,9 +64,22 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, 300px" alt="Photo 1"
+                            class="composition__photo composition__photo--p1"
+                            src="img/nat-1-large.jpg">
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, 300px" alt="Photo 2"
+                            class="composition__photo composition__photo--p2"
+                            src="img/nat-2-large.jpg">
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, 300px" alt="Photo 3"
+                            class="composition__photo composition__photo--p3"
+                            src="img/nat-3-large.jpg">
+
+                        <!-- <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                         <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
                     </div>
                 </div>
             </div>
@@ -300,7 +313,14 @@
     </main>
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="large footer logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                    media="(max-width: 37.5em)">
+                <!-- <img srcset="img/logo-green-1x 1x, img/logo-green-2x.png 2x" alt="large footer logo"> -->
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo"
+                    src="img/logo-green-2x.png">
+            </picture>
+
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -316,7 +336,8 @@
             </div>
             <div class="col-1-of-2">
                 <p class="footer__copyright">
-                    Built by <a href="#" class="footer__link">Abhishek Singh</a>. This web page was built for <a href="#" class="footer__link">Practice</a>. Copyright &copy; Abhishek Singh.
+                    Built by <a href="#" class="footer__link">Abhishek Singh</a>. This web page was built for <a
+                        href="#" class="footer__link">Practice</a>. Copyright &copy; Abhishek Singh.
                 </p>
             </div>
         </div>
@@ -332,7 +353,14 @@
                 <h2 class="heading-secondary">Start booking now</h2>
                 <h3 class="heading-tertiary">Important &ndash; Please read these terms before booking</h3>
                 <p class="popup__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus urna et pharetra pharetra massa. Massa massa ultricies mi quis. Augue ut lectus arcu bibendum at varius vel pharetra vel. Euismod lacinia at quis risus. Tempor commodo ullamcorper a lacus. Venenatis a condimentum vitae sapien pellentesque. Orci ac auctor augue mauris augue neque gravida. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Elit scelerisque mauris pellentesque pulvinar pellentesque. Volutpat odio facilisis mauris sit. Ut ornare lectus sit amet est placerat in egestas erat. Ultricies mi quis hendrerit dolor magna eget est lorem ipsum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Tempus urna et pharetra pharetra massa. Massa massa ultricies mi quis. Augue
+                    ut lectus arcu bibendum at varius vel pharetra vel. Euismod lacinia at quis risus. Tempor commodo
+                    ullamcorper a lacus. Venenatis a condimentum vitae sapien pellentesque. Orci ac auctor augue mauris
+                    augue neque gravida. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Elit
+                    scelerisque mauris pellentesque pulvinar pellentesque. Volutpat odio facilisis mauris sit. Ut ornare
+                    lectus sit amet est placerat in egestas erat. Ultricies mi quis hendrerit dolor magna eget est lorem
+                    ipsum.
                 </p>
                 <a href="#" class="btn btn--green">Book Now</a>
             </div>
